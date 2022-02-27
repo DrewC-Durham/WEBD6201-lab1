@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./Content/app.css" />
+		<script src="./Scripts/app.js" defer></script>
+		<script
+			src="https://kit.fontawesome.com/2b22aff2cf.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<title>Lab 1 - Drew Cross, Carson Brown</title>
+	</head>
+	<body>
+		<nav>
+			<div id="main-nav-item">WEBD6201 - Lesson 1</div>
+			<ul id="sub-nav">
+				<li class="sub-nav-item" data-selected="true" data-section-num="0">
+					<i class="fas fa-home nav-icon"></i>Home
+				</li>
+				<li
+					class="sub-nav-item"
+					data-selected="false"
+					data-section-num="1"
+				></li>
+				<li class="sub-nav-item" data-selected="false" data-section-num="2">
+					<i class="fas fa-bell nav-icon"></i>
+					Services
+				</li>
+				<li class="sub-nav-item" data-selected="false" data-section-num="3">
+					<i class="fas fa-info-circle nav-icon"></i>About Us
+				</li>
+				<li class="sub-nav-item" data-selected="false" data-section-num="5">
+					<i class="fas fa-phone-alt nav-icon"></i>Contact Us
+				</li>
+				<li class="sub-nav-item" data-selected="false" data-section-num="6">
+					<i class="fa-solid fa-arrow-right-to-bracket nav-icon"></i>Log in
+				</li>
+			</ul>
+		</nav>
+		<div id="container">
+			<section id="home" data-visible="hide" data-name="home">
+				<div class="bg-container"></div>
+				<div class="content">
+					<h1 class="title"></h1>
+					<p class="content"></p>
+				</div>
+			</section>
+			<section id="projects" data-visible="hide" data-name="projects">
+				<div class="bg-container"></div>
+				<div class="content">
+					<h1 class="title"></h1>
+					<div class="gallery">
+						<div class="item">
+							<img />
+							<p></p>
+						</div>
+
+						<div class="item">
+							<img />
+							<p></p>
+						</div>
+						<div class="item">
+							<img />
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="services" data-visible="hide" data-name="services">
+				<div class="bg-container"></div>
+				<div class="content">
+					<h1 class="title"></h1>
+					<div class="gallery">
+						<div class="item">
+							<img />
+							<p></p>
+						</div>
+
+						<div class="item">
+							<img />
+							<p></p>
+						</div>
+						<div class="item">
+							<img />
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="about-us" data-visible="hide" data-name="about-us">
+				<div class="bg-container"></div>
+				<div class="content">
+					<h1 class="title"></h1>
+					<div class="gallery about">
+						<div class="item">
+							<img />
+							<button id="resume-drew">Resume</button>
+							<p></p>
+						</div>
+
+						<div class="item">
+							<img />
+							<button id="resume-carson">Resume</button>
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="hr" data-visible="hide" data-name="human-resources">
+				<div class="bg-container"></div>
+				<div class="content">
+					<h1 class="title"></h1>
+					<p class="content"></p>
+				</div>
+			</section>
+			<section id="contact-us" data-visible="hide">
+				<h1>Contact Us!</h1>
+				<p id="thank-you" style="visibility: hidden">
+					Thank you! We will get back shortly!
+				</p>
+				<form id="form-container">
+					<input
+						type="text"
+						name="name"
+						id="name-input"
+						placeholder="Name"
+						autocapitalize="words"
+						required
+					/>
+					<input
+						type="tel"
+						name="phone-number"
+						id="phone-input"
+						placeholder="Phone Number"
+						required
+					/>
+					<input
+						type="email"
+						name="email"
+						id="email-input"
+						placeholder="Email Address"
+						required
+					/>
+					<textarea
+						name="message"
+						id="message-input"
+						cols="30"
+						rows="7"
+						form="form-container"
+						placeholder="Your request/message"
+						autocomplete="false"
+						required
+					></textarea>
+
+					<div id="buttons">
+						<button type="button" onclick="contactSubmit()">Submit</button>
+						<button type="reset">Reset</button>
+					</div>
+				</form>
+			</section>
+			<section id="login-register">
+				<div class="lr-container">
+					<div class="blueBg">
+						<div class="box signin">
+							<h2>Already Have an Account?</h2>
+							<button class="signinBtn">Sign In</button>
+						</div>
+						<div class="box signup">
+							<h2>Don't Have an Account?</h2>
+							<button class="signupBtn">Sign Up</button>
+						</div>
+					</div>
+					<div class="formBx">
+						<div class="form signinForm">
+							<form>
+								<h3>Sign In</h3>
+								<input type="text" placeholder="Username" />
+								<input type="password" placeholder="Password" />
+								<input type="submit" value="Login" name="login" />
+							</form>
+						</div>
+
+						<div class="form signupForm">
+							<form>
+								<h3>Sign Up</h3>
+								<input type="text" placeholder="Username" />
+								<input type="password" placeholder="Password" />
+								<input type="password" placeholder="Confirm Password" />
+								<input type="text" placeholder="First Name" />
+								<input type="text" placeholder="Last Name" />
+								<input type="text" placeholder="Email Address" />
+								<input type="submit" value="Register" name="register" />
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
