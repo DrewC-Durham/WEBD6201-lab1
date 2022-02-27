@@ -225,6 +225,7 @@ function contactSubmit() {
 	}, 3000);
 }
 
+
 // event that triggers when the webpage has loaded
 window.onload = () => {
 	// iterate through all nav items and assign click events
